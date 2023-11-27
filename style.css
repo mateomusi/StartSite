@@ -27,6 +27,11 @@ header {
   justify-content: center;
   margin-right: 100px;
 }
+.logo img {
+  height: 80px;
+  width: fit-content;
+  margin-top: 6px;
+}
 .navbar {
   display: flex;
   position: fixed;
@@ -71,14 +76,13 @@ header {
   letter-spacing: -1px;
   line-height: 1.8em;
   color: #fea611;
+  margin-top: 150px;
 }
 .titulo p {
   color: #000;
   font-style: italic;
 }
-.container {
-  margin-top: 150px;
-}
+
 .fa-arrow-down {
   color: #000;
   font-size: 30px;
@@ -135,40 +139,75 @@ header {
 }
 .cards {
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
 }
 .card {
-  width: 25%;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  overflow: hidden;
-  margin: 20px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-left: -1rem;
+  margin-right: -1rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  margin-bottom: 2rem;
+  width: 320px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 0.25rem;
+  background-color: #494646;
+  padding: 1.5rem;
+  margin-top: 50px;
+}
+
+.price {
+  font-size: 3.75rem;
+  line-height: 1;
+  font-weight: 700;
+  color: #fff;
+}
+
+.desc {
+  margin-top: 0.75rem;
+  margin-bottom: 0.75rem;
+  line-height: 1.625;
+  color: #fea611;
   font-family: "Poppins";
-  transition: transform 1.5s ease;
-}
-.card:hover {
-  transform: scale(1.2);
-}
-.card-img-top {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
 }
 
-.card-body {
-  padding: 20px;
+.lists {
+  margin-bottom: 1.5rem;
+  flex: 1 1 0%;
+  color: rgba(156, 163, 175, 1);
+  font-family: "Poppins";
 }
 
-.card-title {
-  font-size: 1.25rem;
-  margin-bottom: 10px;
+.lists .list {
+  margin-bottom: 0.5rem;
+  font-family: "Poppins";
+  display: flex;
+  margin-left: 0.5rem;
 }
 
-.card-text {
-  color: #555;
-  font-size: 1rem;
-  margin-bottom: 15px;
+.lists .list svg {
+  height: 1.5rem;
+  width: 1.5rem;
+  flex-shrink: 0;
+  margin-right: 0.5rem;
+  color: #fea611;
+}
+
+.action {
+  border: none;
+  outline: none;
+  display: inline-block;
+  border-radius: 0.25rem;
+  background-color: #fea611;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  text-align: center;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  color: rgba(17, 24, 39, 1);
 }
 
 .btn {
@@ -341,4 +380,10 @@ footer {
   font-size: 30px;
   font-family: "Poppins";
   font-style: italic;
+}
+.title-card {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-weight: 700;
+  color: #fff;
 }

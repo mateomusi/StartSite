@@ -157,7 +157,10 @@ header {
   padding: 1.5rem;
   margin-top: 50px;
 }
-
+.card button a {
+  text-decoration: none;
+  color: #000;
+}
 .price {
   font-size: 3.75rem;
   line-height: 1;
@@ -210,6 +213,8 @@ header {
   letter-spacing: 0.05em;
   color: rgba(17, 24, 39, 1);
   cursor: pointer;
+  text-decoration: none;
+  font-family: "Poppins";
 }
 
 .btn {

@@ -272,6 +272,7 @@ header {
 }
 .preguntas-frecuentes {
   margin-top: 100px;
+  align-items: center;
 }
 .preguntas-frecuentes h2 {
   font-family: "Poppins";
@@ -284,7 +285,6 @@ header {
   font-family: "Poppins";
   font-style: italic;
   font-weight: lighter;
-  margin-left: 80px;
 }
 .preguntas-frecuentes li {
   width: 90%;
@@ -295,6 +295,7 @@ header {
   font-size: 24px;
   cursor: pointer;
 }
+
 .answer {
   max-height: 0; /* Inicialmente, las respuestas están ocultas */
   overflow: hidden; /* Oculta cualquier contenido que exceda la altura máxima */
@@ -541,5 +542,8 @@ footer {
 
   .navbar-li {
     margin: 10px 0; /* Espaciado entre elementos */
+  }
+  .redes {
+    width: 400px;
   }
 }

@@ -112,6 +112,7 @@ header {
   width: 70%;
   font-family: "Poppins";
   font-style: italic;
+  text-align: center;
 }
 .detalles {
   display: grid;
@@ -208,6 +209,7 @@ header {
   font-weight: 600;
   letter-spacing: 0.05em;
   color: rgba(17, 24, 39, 1);
+  cursor: pointer;
 }
 
 .btn {
@@ -297,6 +299,7 @@ header {
   max-height: 0; /* Inicialmente, las respuestas están ocultas */
   overflow: hidden; /* Oculta cualquier contenido que exceda la altura máxima */
   transition: max-height 0.3s ease; /* Transición suave de la altura durante 0.3 segundos */
+  color: #494646;
 }
 
 .show-answer {
@@ -368,6 +371,7 @@ header {
   display: flex;
   font-family: "Poppins", sans-serif;
   padding-left: 0;
+  list-style: none;
 }
 footer {
   margin-top: 100px;
@@ -386,4 +390,156 @@ footer {
   line-height: 2rem;
   font-weight: 700;
   color: #fff;
+}
+.hidden {
+  display: none;
+}
+/* Estilos generales de la tarjeta de vista previa */
+.preview-card {
+  position: relative;
+  width: 300px; /* Ancho de la tarjeta */
+  height: 500px; /* Alto de la tarjeta */
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos de la imagen */
+.preview-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+/* Estilos del botón de vista previa */
+.preview-button {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 8px 16px;
+  border-radius: 4px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  border: none;
+  outline: none;
+  border-radius: 0.25rem;
+  display: inline-block;
+  background-color: #fea611;
+  color: rgba(17, 24, 39, 1);
+}
+.preview-button a {
+  text-decoration: none;
+  color: #000;
+}
+.preview-button a:hover {
+  color: #f5f2ed;
+}
+/* Efecto hover del botón */
+.preview-button:hover {
+  background-color: #494646;
+  color: #fff;
+}
+
+.sites {
+  display: flex;
+  gap: 50px;
+  justify-content: center;
+  flex-wrap: nowrap;
+  margin: 0 20px;
+}
+
+.preview {
+  width: 100%; /* Ajusta el ancho según tu diseño */
+  max-width: 800px; /* Ancho máximo para el iframe */
+  margin: 0 auto; /* Centra el contenedor */
+  overflow: hidden; /* Para recortar contenido si es necesario */
+}
+
+.preview iframe {
+  width: 100%; /* Ocupa todo el ancho del contenedor */
+  height: 400px; /* Altura deseada */
+  display: block; /* Para asegurarse de que el iframe se comporte bien */
+  margin: 0 auto; /* Centra el iframe dentro del contenedor */
+}
+
+.btn-info3 {
+  margin-top: 20px;
+  background-color: transparent;
+  font-weight: semibold;
+  background-color: rgba(100, 189, 46, 1);
+  border: solid 1px rgba(100, 189, 46, 1);
+
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  border-radius: 60px;
+  cursor: pointer;
+  transition: all 0.5s ease;
+  box-shadow: -9px -1px 46px -7px rgba(100, 189, 46, 1);
+}
+
+.btn-info3:hover {
+  box-shadow: -9px -1px 46px -7px rgba(100, 189, 46, 1);
+  transform: scale(1.15);
+}
+.btn-info3:active {
+  box-shadow: inset 0.2rem 0.2rem 1rem rgba(100, 189, 46, 1),
+    inset -0.2rem -0.2rem 1rem rgba(100, 189, 46, 1);
+}
+
+.boton {
+  text-decoration: none;
+  color: #fffdfd;
+  padding: 20px;
+  margin: -18px;
+  font-family: "Poppins", sans-serif;
+}
+
+@media screen and (max-width: 768px) {
+  .cards {
+    flex-direction: column; /* Cambiar a una disposición vertical */
+    align-items: center; /* Centrar horizontalmente */
+  }
+  .sites {
+    flex-direction: column;
+    align-items: center;
+  }
+  .detalle h2 {
+    font-size: 16px;
+  }
+  .detalle p {
+    font-size: 12px;
+  }
+  .info h2 {
+    text-align: center;
+  }
+  .question,
+  .answer {
+    font-size: 14px;
+  }
+  .answer {
+    overflow: scroll;
+  }
+  .navbar {
+    flex-direction: column; /* Cambiar a una disposición vertical */
+    align-items: center; /* Centrar horizontalmente */
+    margin-left: 0; /* Eliminar el margen izquierdo para centrar */
+  }
+
+  .logo {
+    width: 100%; /* Ocupar todo el ancho disponible */
+    margin: 20px 0; /* Espaciado entre elementos */
+  }
+
+  .navbar-ul {
+    flex-direction: column; /* Mostrar elementos uno debajo del otro */
+    align-items: center; /* Centrar horizontalmente */
+    display: none;
+  }
+
+  .navbar-li {
+    margin: 10px 0; /* Espaciado entre elementos */
+  }
 }

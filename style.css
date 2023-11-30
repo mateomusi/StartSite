@@ -121,6 +121,9 @@ header {
   justify-content: space-evenly;
   margin-top: 50px;
 }
+.detalle p {
+  font-family: "Poppins";
+}
 .detalle h2 {
   color: #fea611;
   font-family: "Poppins";
@@ -453,7 +456,7 @@ footer {
   display: flex;
   gap: 50px;
   justify-content: center;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
   margin: 0 20px;
 }
 

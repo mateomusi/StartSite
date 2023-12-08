@@ -83,13 +83,15 @@ Nos comprometemos a la satisfaccion de nuestros clientes. Si no estas completame
             <span style="color: #fea611">ADQUIRI</span> NUESTROS
             <span style="color: #fea611">SERVICIOS</span>
           </h2>
-          <div class="card-disc">
-            <div class="offer">
-              <span style="color: #fffdfd(255, 52, 52); font-size: 55px;">40% OFF</span>
-            </div>
-            <div class="row">
-              <div class="countdown" id="countdown"></div>
-            </div>
+          <section class="banner">
+            <h1 class="discount">50% OFF</h1>
+            <h1 class="text-disc">
+                <span style="color: #000; font-size: 90px;">BLACK</span>
+                <span style="color: #ffefd5;">FRIDAY</span>
+                <span style="color: #fea611;">SALE</span>
+            </h1>
+            <div class="countdown" id="countdown"></div>
+          </section>
           </div>
           <div class="cards">
             <div class="card">
@@ -537,9 +539,9 @@ En el caso de la adquicicion del sitio web pre-desarrollado, este estaria demora
     const segundos = Math.floor((tiempoRestante % (1000 * 60)) / 1000);
 
     document.getElementById('countdown').innerHTML = `
-      <p><strong style="font-size: 40px; color: #fffdfd">QUEDAN</strong></p>
-      <p style="color: #00000; font-size: 40px" >${dias} Días ${horas} Horas</p>
-      <p style="color: #00000; font-size: 40px" > ${minutos} Minutos ${segundos} Segundos</p>
+      <p><strong style="font-size: 40px; color: #ffefd5; text-shadow: 2px 4px 10px rgba(0, 0, 0, 0.9);">QUEDAN</strong></p>
+      <p style="color: #ffefd5; font-size: 40px; text-shadow: 2px 4px 10px rgba(0, 0, 0, 0.4);" >${dias} Días ${horas} Horas</p>
+      <p style="color: #ffefd5; font-size: 40px; text-shadow: 2px 4px 10px rgba(0, 0, 0, 0.4);" > ${minutos} Minutos ${segundos} Segundos</p>
     `;
 
     // Si el tiempo ha terminado, detener el intervalo

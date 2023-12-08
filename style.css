@@ -31,11 +31,11 @@ header {
   height: 80px;
   width: fit-content;
   margin-top: 6px;
+  margin-left: 100px;
 }
 .navbar {
   display: flex;
   position: fixed;
-  margin-left: 100px;
   background-color: #fff;
   width: 100%;
   z-index: 1;
@@ -519,8 +519,8 @@ footer {
   left: 0;
   width: 105%;
   height: 3px; /* Grosor de la línea de tachado */
-  background-color: red; /* Color de la línea de tachado */
-  transform: rotate(30deg); /* Ángulo de la línea de tachado */
+  background-color: #000; /* Color de la línea de tachado */
+  transform: rotate(15deg); /* Ángulo de la línea de tachado */
 }
 .card-disc {
   width: 60%;
@@ -548,6 +548,38 @@ footer {
   display: flex;
   justify-content: space-around;
   width: 100%;
+}
+.banner {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: auto; /* Adjust the height to fit your needs */
+  background: rgb(255, 221, 165);
+  background: linear-gradient(
+    0deg,
+    rgba(255, 221, 165, 1) 0%,
+    rgba(253, 187, 45, 1) 100%
+  );
+}
+
+.discount {
+  color: #ffefd5;
+  font-size: 40px;
+  text-shadow: 2px 4px 10px rgba(0, 0, 0, 0.9); /* Shadow effect */
+}
+.banner .text-disc {
+  font-size: 70px;
+  margin-bottom: 100px;
+  line-height: 42px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  text-transform: uppercase;
+  transform: rotate(-15deg);
+  color: white;
+  text-shadow: 2px 4px 10px rgba(0, 0, 0, 0.9); /* Shadow effect */
 }
 
 @media screen and (max-width: 768px) {

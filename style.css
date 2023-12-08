@@ -266,6 +266,7 @@ header {
 }
 .metodos-de-pago h2 {
   margin-bottom: 50px;
+  text-align: center;
 }
 .metodos-de-pago li {
   list-style: none;

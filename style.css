@@ -505,6 +505,50 @@ footer {
   margin: -18px;
   font-family: "Poppins", sans-serif;
 }
+.tachado {
+  position: relative;
+  color: #8b8b8b;
+  font-size: 40px;
+  margin-left: 5px;
+}
+
+.tachado::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 105%;
+  height: 3px; /* Grosor de la línea de tachado */
+  background-color: red; /* Color de la línea de tachado */
+  transform: rotate(30deg); /* Ángulo de la línea de tachado */
+}
+.card-disc {
+  width: 60%;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  background-color: #fea611;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-self: center;
+}
+
+.offer {
+  font-size: 34px;
+  margin-bottom: 20px;
+}
+
+.countdown {
+  font-size: 18px;
+}
+
+.row {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
 
 @media screen and (max-width: 768px) {
   .cards {

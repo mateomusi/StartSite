@@ -83,11 +83,19 @@ Nos comprometemos a la satisfaccion de nuestros clientes. Si no estas completame
             <span style="color: #fea611">ADQUIRI</span> NUESTROS
             <span style="color: #fea611">SERVICIOS</span>
           </h2>
+          <div class="card-disc">
+            <div class="offer">
+              <span style="color: #fffdfd(255, 52, 52); font-size: 55px;">40% OFF</span>
+            </div>
+            <div class="row">
+              <div class="countdown" id="countdown"></div>
+            </div>
+          </div>
           <div class="cards">
             <div class="card">
               <div class="header">
                           <span class="title-card">Silver</span>
-                          <span class="price">499$</span>
+                          <span class="price"><span class="tachado"> 499$</span> 299$</span>
                         </div>
                         <p class="desc">4 plantillas disponibles</p>
                         <ul class="lists">
@@ -136,7 +144,7 @@ Nos comprometemos a la satisfaccion de nuestros clientes. Si no estas completame
                       <div class="card">
                         <div class="header">
                                     <span class="title-card">Gold</span>
-                                    <span class="price">599$</span>
+                                    <span class="price"><span class="tachado"> 599$</span> 399$</span>
                                   </div>
                                   <p class="desc">6 plantillas disponibles</p>
                                   <ul class="lists">
@@ -185,7 +193,7 @@ Nos comprometemos a la satisfaccion de nuestros clientes. Si no estas completame
                                 <div class="card">
                                   <div class="header">
                                               <span class="title-card">Platinum</span>
-                                              <span class="price">699$</span>
+                                              <span class="price"><span class="tachado"> 699$</span> 499$</span>
                                             </div>
                                             <p class="desc">Todas las plantillas disponibles</p>
                                             <ul class="lists">
@@ -513,5 +521,32 @@ En el caso de la adquicicion del sitio web pre-desarrollado, este estaria demora
     infoGold.classList.add('hidden');
     infoPlatinum.classList.toggle('hidden');
   });
+</script>
+<script>
+  // Definir la fecha de finalización (puedes ajustar esta fecha)
+  const fechaFinalizacion = new Date('2024-01-01').getTime();
+
+  // Actualizar el contador cada segundo
+  const intervalo = setInterval(() => {
+    const ahora = new Date().getTime();
+    const tiempoRestante = fechaFinalizacion - ahora;
+
+    const dias = Math.floor(tiempoRestante / (1000 * 60 * 60 * 24));
+    const horas = Math.floor((tiempoRestante % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutos = Math.floor((tiempoRestante % (1000 * 60 * 60)) / (1000 * 60));
+    const segundos = Math.floor((tiempoRestante % (1000 * 60)) / 1000);
+
+    document.getElementById('countdown').innerHTML = `
+      <p><strong style="font-size: 40px; color: #fffdfd">QUEDAN</strong></p>
+      <p style="color: #00000; font-size: 40px" >${dias} Días ${horas} Horas</p>
+      <p style="color: #00000; font-size: 40px" > ${minutos} Minutos ${segundos} Segundos</p>
+    `;
+
+    // Si el tiempo ha terminado, detener el intervalo
+    if (tiempoRestante < 0) {
+      clearInterval(intervalo);
+      document.getElementById('countdown').innerHTML = "¡La oferta ha finalizado!";
+    }
+  }, 1000);
 </script>
 </html>
